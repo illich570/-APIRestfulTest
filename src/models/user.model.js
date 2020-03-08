@@ -9,7 +9,7 @@ const UserSchema = new Schema({
   password: {type: String, required: true}
 });
 
-UserSchema.methods.toJSON() = function(){
+UserSchema.methods.toJSON = function(){
   let user = this.toObject();
   delete user.password; // ESTO SUCEDERA CADA VEZ QUE SE REQUIERA UN DATO DE USER
   return user;
