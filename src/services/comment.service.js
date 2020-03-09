@@ -6,7 +6,7 @@ class CommentService extends BaseService {
 
   constructor({CommentRepository, IdeaRepository}){
     super(CommentRepository);
-    _commentRepository = CommentRpository;
+    _commentRepository = CommentRepository;
     _ideaRepository = IdeaRepository;
   }
 
