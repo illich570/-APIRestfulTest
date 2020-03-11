@@ -3,7 +3,7 @@ class UserController {
   constructor({UserService}){
     _userService = UserService;
   }
-
+ // ANTES DE LLEGAR AQUI PASA POR TODOS LOS MIDDLEWARES
 
   async get(req, res){
     const { userId} = req.params; //myapi.com/user/455454 < esto es params
@@ -12,7 +12,8 @@ class UserController {
   }
 
   async getAll(req, res){
-    const users = await _userService.getAll();
+    const {pageSize, pageNum} = req.query;
+    const users = await _userService.getAll(pageSize, pageNum);
     return res.send(users);
   }
 
