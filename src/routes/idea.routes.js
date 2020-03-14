@@ -11,8 +11,8 @@ module.exports = function({IdeaController}){
   router.post('/', IdeaController.create);
   router.patch('/:ideaId', IdeaController.update);
   router.delete('/:ideaId', IdeaController.delete);
-  router.post(':ideaId/upvote', IdeaController.upvoteIdea);
-  router.post(':ideaId/downvote', IdeaController.downvoteIdea);
+  router.post('/:ideaId/upvote', IdeaController.upvoteIdea);
+  router.post('/:ideaId/downvote', IdeaController.downvoteIdea);
 
 
   return router;
